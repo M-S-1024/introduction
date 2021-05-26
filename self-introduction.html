@@ -4,20 +4,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=dvice-width,initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"> 
     <title>自己PR</title>
     
 <!-- ここから -->
     <style type="text/css"> 
-    body{
-        /* 背景 */
+    body{   /* 背景 */
         background-color: #fff;
         background-image: 
         linear-gradient(90deg, rgba(112, 179, 140, 0.5) 50%, transparent 50%),
         linear-gradient(rgba(126, 230, 152, 0.5) 50%, transparent 50%);
         background-size: 80px 80px;
         }
-   .title{
-       /* タイトル＿背景 */
+   .p_title{  /* タイトル＿背景 */
         font-family: 'M PLUS Rounded 1c', sans-serif;
         background-color: lightgreen;
         background-image: 
@@ -25,76 +24,178 @@
         radial-gradient(#fff 30%, transparent 30%);
         background-size: 40px 40px;
         background-position: 0 0, 20px 20px;
-        /* タイトル＿文字 */
+            /* タイトル＿文字 */
         line-height: 80px;
         font-size: 50px;
         font-weight: 700;
         color: green;
     }
-    #i_sample{
-        /* 横並び画像 */
+    #i_sample{  /* 横並び画像 */
         background-size: auto 160px;
         width: auto;
         height: 160px;
-        background-image: url("oooo.png");
+        background-image: url("img/oooo.png");
         background-repeat: repeat-x;
     }
-    #i_img{
-        /* 右下画像 */
+    #i_img{ /* 右下画像 */
         position:absolute;	
-		bottom:0px;
-		right:200px;
+		bottom:-750px;
+		right:150px;
+        background-size: auto 400px;
+        background-image: url("img/ssss.png");
+        width: 400px;
+        height: 400px;
+    }
+    #i2_img{ /* 右上画像 */
+        position:absolute;	
+		bottom:300px;
+		right: 20px;
         background-size: auto 300px;
-        background-image: url("ssss.png");
+        background-image: url("img/run.png");
         width: 300px;
         height: 300px;
+        background-repeat: no-repeat;
     }
     p{
         margin: 5px;
     }
-    ul{
+    .iii{
         font-family: 'M PLUS Rounded 1c', sans-serif;
-        margin-top: 10px;
-        font-size: large;
+        margin-top: 30px;
+        font-size: xx-large;
+        color: #000;
+        
     }
-    li{
+    .pr{
         font-family: 'M PLUS Rounded 1c', sans-serif;
         list-style-type: none;
         color: crimson;
+    }
+
+    /* ハンバーガーメニュー */
+    .sss{
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        list-style-type: none;
+        font-size: large;
+    }
+
+    #cover{
+        background-color: #000;
+        opacity: .6;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+        z-index: 2;
+    }
+    #main{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 8px;
+        z-index: 1;
+        overflow: auto;
+        box-sizing: border-box;
+    }
+    #menu{
+        background-color: #fff;
+        background-image: 
+        linear-gradient(90deg, rgba(112, 179, 140, 0.5) 50%, transparent 50%),
+        linear-gradient(rgba(126, 230, 152, 0.5) 50%, transparent 50%);
+        background-size: 80px 80px;
+        color: green;
+        position: absolute;
+        top: 0;
+        left: -180px;
+        padding: 8px;
+        width: 180px;
+        min-height: 100%;
+        z-index: 3;
+        box-sizing: border-box;
+        transition: .4s;
+    }
+    #open,#close{
+        float: left;
+        cursor: pointer;
+    }
+    #cover.menu-open{
+        display: block;
+    }
+    #menu.menu-open{
+        left: 0;
     }
     </style>
 </head>
 
 <!-- ここから -->
 <body>
+    <div id="main">
+        <i class="fa fa-bars" id="open"></i>
+        <div class="p_title">&nbsp;&nbsp;&nbsp;自己PR</div>
+    <div id="i_sample"></div>
+    <div id="i_img"></div>
+    <div id="i2_img"></div>
+
+    <ul class="iii">
+        <li class="pr"><section id="i1">名前</section></li>
+            <p>佐藤萌香</p>
+        <br><li class="pr"><section id="i2">生年月日</section></li>
+            <p>1998/10/24</p>
+        <br><li class="pr"><section id="i3">大学時代</section></li>
+            <p>ゼミ(アニメの研究)</p>
+            <p>サークル活動(紅茶部所属)</p>
+            <p>図書館司書の資格取得</p>
+            <p>アルバイト(ファミレス 4年勤務)</p>
+        <br><li class="pr"><section id="i4">部活動</section></li>
+            <p>茶道部(中学1年～高校3年)</p>
+            <p>紅茶部(大学１年～大学4年)</p>
+        <br><li class="pr"><section id="i5">趣味</section></li>
+            <p>整理整頓</p>
+            <p>動画鑑賞</p>
+        <br><li class="pr"><section id="i6">特技</section></li>
+            <p>茶道</p>
+        <br><li class="pr"><section id="i7">コメント</section></li>
+            <p>学生時代はアルバイトに力を入れていました。</p>
+            <P>アルバイトで得た経験は、今後の社会人生活にも活かしていけると思います。</p>
+            <P>また、エンジニアとしても、学習を続けていき頑張っていきたいです！！！</P>
+    </ul>
+    </div>
+    <!-- ハンバーガーメニュー -->
+    <div id="menu">
+        <i class="fa fa-times" id="close"></i>
+        <ul class="sss">
+            <img src="img/olol.png" width="100px" height="100px">
+            <li><a href="#i1">名前</a></li>
+            <li><a href="#i2">生年月日</a></li>
+            <li><a href="#i3">大学時代</a></li>
+            <li><a href="#i4">部活動</a></li>
+            <li><a href="#i5">趣味</a></li>
+            <li><a href="#i6">特技</a></li>
+            <li><a href="#i7">コメント</a></li>
+        </ul>
+    </div>
+
+    <script>
+        const open = document.getElementById('open');
+        const close = document.getElementById('close');
+
+        open.addEventListener('click', () => {
+                menu.className = 'menu-open';
+                cover.className = 'menu-open'
+        });
+        close.addEventListener('click', () => {
+                menu.className = '';
+                cover.className = '';
+        });
+    </script>
+
     <script>
         alert("こんにちは!!!");
     </script>
-    
-    <div class="title">&nbsp;&nbsp;&nbsp;自己PR</div>
-    <div id="i_sample"></div>
-    <div id="i_img"></div>
 
-    <ul>
-        <li>名前</li>
-            <p>佐藤萌香</p>
-        <li>生年月日</li>
-            <p>1998/10/24</p>
-        <li>大学時代</li>
-            <p>ゼミ(アニメの研究)</p>
-            <p>サークル活動(紅茶部)</p>
-            <p>図書館司書の資格の取得</p>
-            <p>アルバイト(ファミレス4年)</p>
-        <li>部活動</li>
-            <p>茶道部(中学～高校)</p>
-            <p>紅茶部(大学時代)</p>
-        <li>趣味</li>
-            <p>動画鑑賞</p>
-        <li>特技</li>
-            <p>茶道</p>
-        <li>一言</li>
-            <p>がんばります！</p>
-    </ul>
 </body>
-
 </html>
